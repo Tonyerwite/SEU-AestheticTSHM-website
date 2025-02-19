@@ -200,9 +200,18 @@ a.normal {
     text-decoration: underline;
     color: #0000ff;
     display: inline;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 a.normal:hover {
     text-decoration: none;
+}
+
+.float-img {
+    float: right;
+}
+.float-img img {
+    max-height: 20vh;
+    width: auto;
+    margin-left: 15px;
 }
