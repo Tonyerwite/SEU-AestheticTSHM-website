@@ -221,6 +221,16 @@
     padding-bottom: 0.5rem;
   }
 
+  .vx_link .single-title {
+    background-color: #707070;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .vx_link .single-title p {
+    color: #eaeaea;
+  }
+
   .review {
     display: grid;
     grid-template-columns: 5fr 2fr 3fr; /* 列分成5:3:2三部分 */
@@ -322,4 +332,21 @@ canvas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+}
+
+.bottomwrapper {
+  text-align: center;
+  width: 100%;
+  padding: 2em;
+}
+
+a.normal {
+  text-decoration: underline;
+  color: #0000ff;
+  display: block;
+  font-size: 1.5rem;
+}
+
+a.normal:hover {
+  text-decoration: none;
 }
