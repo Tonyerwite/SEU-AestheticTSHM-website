@@ -73,6 +73,10 @@ function drawWave() {
         ctx.lineTo(x, y);
     }
 
+    ctx.strokeStyle = '#cccc00';
+    ctx.lineWidth = 5;
+    ctx.stroke();
+
     ctx.textAlign = 'center';
     for (let i = 0; wave.offsetX * 14 >= canvas.width * (2 * i + 1) ; i++) {
         const x = canvas.width * (2 * i + 1) / 14;
@@ -98,10 +102,6 @@ function drawWave() {
             ctx.fillText(lowertext[i], x, y+loffset[i]);
         }
     }
-
-    ctx.strokeStyle = '#cccc00';
-    ctx.lineWidth = 5;
-    ctx.stroke();
 }
 
 // 更新波浪的显现进度
