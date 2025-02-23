@@ -11,18 +11,19 @@ const contents=[
     document.querySelector("#c7")
 ];
 
-const wave = {
+let wave = {
     amplitude: 50, // 波浪的振幅
     frequency: 1, // 波浪的频率
     speed: 20, // 逐渐显现的速度（控制从左到右显现的速度）
     offsetX: 0, // 波浪的水平偏移量，控制显现的进度
 };
 
-const canvasWidth = window.innerWidth;
+let canvasWidth = window.innerWidth;
 const canvasHeight = 200;
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 wave.frequency = 7.0*Math.PI/canvasWidth;
+
 
 let isInViewport = false;
 
@@ -120,6 +121,13 @@ function updateWave() {
     }
 }
 
+function resize() {
+    canvasWidth = window.innerWidth;
+    canvas.width = canvasWidth;
+    wave.frequency = 7.0*Math.PI/canvasWidth;
+    drawWave();
+}
+
 // 使用 IntersectionObserver 来检查何时进入视口
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -133,3 +141,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 observer.observe(canvas);
+window.addEventListener('resize',resize);
