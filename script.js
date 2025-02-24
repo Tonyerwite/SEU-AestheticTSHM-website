@@ -142,3 +142,11 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(canvas);
 window.addEventListener('resize',resize);
+console.log(`Powered by
+__________       ______          
+___  ____/__________  /_ ___   __
+__  __/   _ ____/__  __ \\__ | / /
+_  /___   /____/ _  / / /__ |/ / 
+/_____/          /_/ /_/ _____/  
+                                 
+`);

@@ -166,7 +166,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    height: 140vh;
+    min-height: 140vh;
   }
 
   .media_ .left-column, .media_ .mid-column, .media_ .right-column {
@@ -179,7 +179,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 80vh;
+  }
+
+  .media_ .left-column a {
+    height: auto;
   }
   .vx_link > * {
     margin: 0;
@@ -237,10 +240,7 @@
     gap: 10px; /* 列之间的间距 */
     height: 80vh;
   }
-/*
-  .review > * {
-    overflow: scroll;
-  }*/
+  
   .review .left-column, .review .middle-column, .review .right-column {
     padding: 10px; /* 内边距 */
     height: 100%;
